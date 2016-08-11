@@ -1,0 +1,8 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /underconstruction/
+
+FallBackResource /underconstruction/index.html
+
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} !-f
+RewriteRule ^.*$ index.html [NC,L,R]
